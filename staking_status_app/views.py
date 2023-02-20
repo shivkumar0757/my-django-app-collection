@@ -18,7 +18,7 @@ def status_view_job(request):
     check_and_save_status()
 
     # test_func.delay()
-    check_and_save_status.delay()
+    # check_and_save_status.delay()
     print('started out...')
 
     # Return a response to the client
