@@ -15,11 +15,12 @@ def index(request):
 def status_view_job(request):
     # Schedule the Celery task to run in the background
     print('starting.. via api in view.')
-    check_and_save_status()
+    
 
     # test_func.delay()
     # check_and_save_status.delay()
-    print('started out...')
+    status = check_and_save_status()
+    print("----------------- ",  status)
 
     # Return a response to the client
-    return JsonResponse({'message': 'Status check scheduled'})
+    return status

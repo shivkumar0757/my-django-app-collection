@@ -11,6 +11,7 @@ def check_and_save_status():
     print('in scheduled tasks: ', status[0])
     save_staking_log(status)
     # print('----- saved: ')
+    return status
 
 @shared_task(bind=True)
 def test_func(self):
